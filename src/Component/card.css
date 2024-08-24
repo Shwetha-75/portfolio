@@ -1,0 +1,132 @@
+.div-tag-navigation-bar{
+
+  left: 0;
+  width: 100%;
+    position:fixed;
+    backdrop-filter: blur(12px);
+    background: rgb(5, 7, 39);
+
+    background: linear-gradient(90deg, rgb(2, 6, 57) 0%, hsl(261, 96%, 11%) 100%);
+    
+    background: -moz-linear-gradient(90deg, rgba(15, 5, 39, 0.883) 0%, rgb(27, 3, 77) 100%);
+    
+    background: -webkit-linear-gradient(90deg, rgb(5, 6, 17) 0%, rgb(5, 27, 51) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
+    width:100%;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+   
+    cursor: pointer;
+    color:white;
+    border-bottom: solid 5px rgb(115, 115, 115);
+    z-index:1000;
+}
+/* *{
+    width:100%;
+    height:100vh;
+} */
+
+.nav-tag-lit-items>li{
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    margin-top:5%;
+    transition: all  0.5s ease-in-out;
+   
+ }
+ .nav-tag-lit-items{
+   
+ }
+
+  #myNav{
+    transition: all 0.5s  ease-in-out;
+    height:100vh; 
+  }
+  #hidden{
+    transition: all  0.9s ease-in-out;
+    height:100vh;
+  }
+.hidden{
+  transition: all  0.9s ease-in-out;
+  display:none;
+}
+.arrow-tag{
+  position: fixed; 
+margin-left: 45%;
+opacity:0;
+
+
+}
+.text-tag{
+   margin-left:44%;
+  color:white;
+  opacity:0;
+
+}
+.div-tag-navigation-bar>ul>li{
+  margin-top:7%;
+  margin-left:45%;
+}
+.arrow-tag-hidden{
+    
+}
+@media(max-width:1024px) {
+  .div-tag-navigation-bar>ul>li{
+        text-align: center;
+        text-decoration: none;
+        list-style: none;
+        margin-top:30%;
+        margin-left:-9%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2rem;
+     } 
+
+     .arrow-tag{
+      position: fixed;
+    margin-left: 45%;
+    
+    
+    }
+
+    .google-tag-div--g:hover{
+      color:rgb(23, 86, 211);
+   }
+
+   .google-tag-div--o-1{
+    color:rgb(211, 19, 19);
+  }
+  .google-tag-div--l{
+    color:rgb(16, 187, 10);
+  }
+  .google-tag-div--o{
+    color:rgb(255, 251, 36);
+  }
+  .google-tag-div--e{
+    color:rgb(211, 19, 19);
+  }
+  .google-tag-div--mail{
+    color:rgb(211, 19, 19);
+  }
+  }
+
+
+  .google-tag-div--g{
+    color:rgb(23, 86, 211);
+ }
+ .google-tag-div--o-1{
+  color:rgb(211, 19, 19);
+}
+.google-tag-div--l{
+  color:rgb(16, 187, 10);
+}
+.google-tag-div--o{
+  color:rgb(255, 251, 36);
+}
+.google-tag-div--e{
+  color:rgb(211, 19, 19);
+}
+.google-tag-div--mail{
+  color:rgb(211, 19, 19);
+}
