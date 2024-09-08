@@ -32,7 +32,7 @@
     text-align: center;
     text-decoration: none;
     list-style: none;
-    margin-top:5%;
+    margin-top:95%;
     transition: all  0.5s ease-in-out;
    
  }
@@ -43,7 +43,9 @@
   #myNav{
     transition: all 0.5s  ease-in-out;
     height:100vh; 
+
   }
+ 
   #hidden{
     transition: all  0.9s ease-in-out;
     height:100vh;
@@ -54,8 +56,8 @@
 }
 .arrow-tag{
   position: fixed; 
-margin-left: 45%;
-opacity:0;
+  margin-left: 45%;
+  opacity:0;
 
 
 }
@@ -67,25 +69,25 @@ opacity:0;
 }
 .div-tag-navigation-bar>ul>li{
   margin-top:7%;
-  margin-left:45%;
+
 }
 .arrow-tag-hidden{
     
 }
-@media(max-width:1024px) {
+@media(max-width:900px) {
   .div-tag-navigation-bar>ul>li{
         text-align: center;
         text-decoration: none;
         list-style: none;
-        margin-top:30%;
+        margin-top:28%;
         margin-left:-9%;
         font-family: 'Times New Roman', Times, serif;
-        font-size: 2rem;
+        font-size: 1.3rem;
      } 
 
      .arrow-tag{
       position: fixed;
-    margin-left: 45%;
+       margin-left: 45%;
     
     
     }

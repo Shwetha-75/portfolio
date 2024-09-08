@@ -2,6 +2,79 @@ body{
     background-color: black;
 }
 
-*{
-    overflow-x: hidden;
-}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    width:100%;
+    background: #000000;
+  
+  }
+  body {
+    background-color: #000000;
+  }
+  .section {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 32px;
+    font-weight: bold;
+    transition: opacity 1s ease, transform 0.9s ease;
+  }
+  
+  /* Hidden sections are set to opacity 0 and translated up */
+  .hidden-section {
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden; /* Ensure the hidden sections are not interactable */
+  }
+  
+  /* Active section styles */
+  .active-section {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  
+  /* Fade out class for smooth transition */
+  .fade-out {
+    opacity: 0;
+    transform: translateY(-100px); /* Slide out to the top */
+  }
+  
+  /* Specific section styling */
+  #about,
+  #projects,
+  #blog,
+  #contact {
+    background: rgb(5, 7, 39);
+    background: linear-gradient(90deg, rgb(2, 6, 57) 0%, hsl(261, 96%, 11%) 100%);
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: -5px;
+    z-index: 9999;
+    height: 70px;
+    width: calc(100% - 1.5rem);
+    background-color:transparent;
+    color: white;
+  }
+  
+  .nav__container__actions ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .nav__container__actions li {
+    cursor: pointer;
+  }
+  
+  .nav__container__actions li:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,232 +1,198 @@
-// import React from 'react'
-// import Name from './Name';
-// import Contact from './Contact';
-// import { PiLessThan } from "react-icons/pi";
-// // import Slider from 'react-slick';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
-// import GridCard from './Card';
-// import { BiSolidUpArrow } from "react-icons/bi";
-// // import ScrollToTop from "react-scroll-to-top";
-// // import { TfiArrowCircleUp } from "react-icons/tfi";
-// // import  {useInView } from 'react-intersection-observer';
-// // import Slide from '@mui/material/Slide';
-// export default function Main() {
+import React, { useState } from "react";
+import { Link} from "react-scroll";
+import "./card.css"
 
-//   const [cursor,setCursor]=React.useState({x:0,y:0});
+export default function App() {
 
+  const[status,setStatus]=React.useState(false);
+  const [onHoverMail,setOnHoverMail]=React.useState(false);
+const [onHoverLinkedIn,setOnHoverLinkedIn]=React.useState(false);
+const [onHoverLeetCode,setOnHoverLeetCode]=React.useState(false);
+const [onHoverHackerRank,setOnHoverHackerRank]=React.useState(false);
 
+const handleOnClickLinkedIn=()=>{
+ window.open('https://www.linkedin.com/in/shwetha-k-0948ab228/','')
+}
 
-//   React.useEffect(() => {
-//     const handleMouseMove = (e) => {
-//       setCursor({ x: e.clientX, y: e.clientY });
-//     };
+const handleOnClickHackerRank=()=>{
+ window.open('https://www.hackerrank.com/profile/shwetha_675','')
+}
 
-//     document.addEventListener('mousemove', handleMouseMove);
-//     return () => {
-//       document.removeEventListener('mousemove', handleMouseMove);
-//     };
-//   }, []);
+const handleOnClickLeetCode=()=>{
+ window.open('https://leetcode.com/SHWETHA_K/','')
+}
 
-//   const [status,setStatus]=React.useState(false);
-//   const handleOnClickSetStatus=()=>{
-//     setStatus(!status)
-//   }
-//   // const [isVisible, setIsVisible] = React.useState(false);
+const handleOnClickGmail=()=>{
+ window.open('mailto:shwethak412@gmail.com','')
+}
+ const handleOnClickStatus=()=>{
+   setStatus(!status);
+ }
 
-//   // Show button when page is scrolled down 300px
-//   // const toggleVisibility = () => {
-//   //     if (window.pageYOffset > 300) {
-//   //         setIsVisible(true);
-//   //     } else {
-//   //         setIsVisible(false);
-//   //     }
-//   // };
+  const [activeSection, setActiveSection] = useState("about");
+  const [fadeOut, setFadeOut] = useState(false);
 
-//   // Scroll to top
-//   // const scrollToTop = () => {
-//   //     window.scrollTo({
-//   //         top: 0,
-//   //         behavior: 'smooth'
-//   //     });
-//   // };
+  const handleSetActive = (to) => {
+    setFadeOut(true); // Start fading out current section
 
-//   // React.useEffect(() => {
-//   //     window.addEventListener('scroll', toggleVisibility);
-//   //     return () => {
-//   //         window.removeEventListener('scroll', toggleVisibility);
-//   //     };
-//   // }, []);
+    // Delay switching section until the fade out is done
+    setTimeout(() => {
+      setActiveSection(to);
+      setFadeOut(false); // Remove fade effect for the new section
+    }, 600); 
+  };
 
-//   const [isVisible,setIsVisible]=React.useState(false);
-//   const toggleMoveTop=()=>{
-//     if(window.pageYOffset>300)
-//       {
-//         setIsVisible(true);
-//       }
-//       else{
-//         setIsVisible(false);
-//       }
-//   }
-//   const handleOnScroll=()=>{
-//        window.scrollTo({
-//         top:0,
-//         behavior:'smooth'
-//        })
-//   }
-//   React.useEffect(()=>{
+  return (
+    <div className="App">
+      <header className="nav">
+        <nav className="nav__container__actions">
+          <ul>
+            <li>
+              <Link
+                activeClass="active"
+                smooth
+                spy
+                to="about"
+                onClick={() => handleSetActive("about")}>
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                smooth
+                spy
+                to="projects"
+                onClick={() => handleSetActive("projects")}>
+                PROJECTS
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                smooth
+                spy
+                to="blog"
+                onClick={() => handleSetActive("blog")}>
+                BLOG
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                smooth
+                spy
+                to="contact"
+                onClick={() => handleSetActive("contact")}
+              >
+                CONTACT ME
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+   
+      <section
+
+        id="about"
+        className={`section 
+          ${activeSection === "about" ?
+             "active-section" : "hidden-section"} 
+             ${fadeOut && activeSection === "about" ? "fade-out" : ""}`}
+      >
+        ABOUT
+      </section>
+
+      <section
+        id="projects"
+        className={`section ${activeSection === 
+          "projects" ? 
+          "active-section" : 
+          "hidden-section"} ${fadeOut && 
+            activeSection === "projects" ? "fade-out" : ""}`}
+      >
+        PROJECTS
+      </section>
+
+      <section
+        id="blog"
+        className={`section 
+          ${activeSection === "blog" ? "active-section" : "hidden-section"} 
+          ${fadeOut && activeSection === "blog" ? "fade-out" : ""}`}
+      >
+        BLOG
+      </section>
+
+      <section
+        id="contact"
+        className={`section 
+          ${activeSection === "contact" ? "active-section" : "hidden-section"} 
+          ${fadeOut && activeSection === "contact" ? "fade-out" : ""}`}
+      >
+        CONTACT ME
     
-//     document.addEventListener('scroll', toggleMoveTop);
-//     return () => {
-//       document.removeEventListener('scroll', toggleMoveTop);
-//     };
-//   },[]);
-//     // const settings = {
-//     //   dots: true,
-//     //   infinite: false,
-//     //   speed: 500,
-//     //   slidesToShow: 1,
-//     //   slidesToScroll: 1,
-//     //   vertical: true, // To scroll vertically like pages
-//     //   verticalSwiping: true,
-//     // };
-  
-//     // const pages = [
-//     //   { id: 1, content: 'Page 1 Content' },
-//     //   { id: 2, content: 'Page 2 Content' },
-//     //   { id: 3, content: 'Page 3 Content' },
-//     //   // Add more pages as needed
-//     // ];
-  
-//   const handleOnClickGmail=()=>{
-//     window.open('mailto:shweetha.sweety17@gmail.com','')
-//   }
-
-//   const handleOnClickLinkedIn=()=>{
-//     window.open('https://www.linkedin.com/in/shwetha-k-0948ab228/','')
-//   }
+      <nav 
+      id={status?"myNav":"hidden"}
+           className="div-tag-navigation-bar">
+        <ul
+        style={{
+          listStyle:'none'
+        }}
+        >
+         
+        <li 
+        style={{
+          marginTop:'2%'
+        }}
+        onClick={handleOnClickLinkedIn}
+        className={onHoverLinkedIn?'linkedIn-tag':''}
+        onMouseOver={()=>setOnHoverLinkedIn(true)} 
+        onMouseLeave={()=>setOnHoverLinkedIn(false)}>
+            Linked In
+          </li>
+          <li
+          onClick={handleOnClickGmail}
+          >
 
 
-//   return (
-//     <div>
+          
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--g':""} style={{display:'inline-flex'}}>G</div> 
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--o-1':""} style={{display:'inline-flex'}}>o</div> 
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--o':""} style={{display:'inline-flex'}}>o</div> 
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--g':""} style={{display:'inline-flex'}}>g</div> 
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--l':""} style={{display:'inline-flex'}}>l</div>   
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--e':""} style={{display:'inline-flex'}}>e</div>   
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div---':""} style={{display:'inline-flex'}}>-</div> 
+           <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--mail':''} style={{display:'inline-flex'}}>{" "}mail</div> 
 
-//         <Name/>
-//         <GridCard/>
-//    <div className={`div-tag-arrow ${isVisible? 'visible':''}`}  >
-//    < BiSolidUpArrow  onClick={handleOnScroll} visibility={isVisible} size={50}/>
-//    </div>
-//          {/* <button
-//             className={`move-to-top ${isVisible ? 'visible' : ''}`}
-//             onClick={scrollToTop}
+          </li>
+          <li
+          onClick={handleOnClickLeetCode}
+          className={onHoverLeetCode?'leetcode-tag':''}
+          onMouseOver={()=>setOnHoverLeetCode(true)}
+          onMouseLeave={()=>setOnHoverLeetCode(false)}
+          >
+           Leet Code
+          </li>
+          <li
+          onClick={handleOnClickHackerRank}
+          className={onHoverHackerRank?'hackerRank-tag':''}
+          onMouseOver={()=>setOnHoverHackerRank(true)}
+          onMouseLeave={()=>setOnHoverHackerRank(false)} >
+           Hacker Rank
+          </li>
+        </ul>
+        <div onClick={handleOnClickStatus}>
+        
+          
+       </div>
+        
+        </nav>   
+     
 
-//         >
-//             Top
-//         </button> */}
-//         <Contact handleOnClickSetStatus={handleOnClickSetStatus}  />
-
-       
-// <div id={status ?'myNav':'hidden'} className="overlay">
-//   <p style={{textAlign:'center'}}>Drop Your Message</p>
-//   {/* <div  className="closebtn" onClick={()=>setStatus(false)}>&times;</div> */}
-//   <PiLessThan className="closebtn" size={0} onClick={()=>setStatus(false)}/>
-//   <div className="overlay-content">
-//     <p onClick={handleOnClickGmail} className="gmail-tag">Gmail</p>
-//     <p onClick={handleOnClickLinkedIn}  className="linkedin-tag">LinkedIn</p>
-   
-   
-//   </div>
-// </div>
-
-// {status &&  (<div>
-  
-// <div
-//         className="cursor-shadow"
-//         style={{ left: `${cursor.x}px`, top:`${ cursor.y}px` }}
-//       ></div>
-//       <h1>hello</h1>
-//       <div
-//         className="cursor-text"
-//         style={{ left: `${cursor.x}px`, top:`{${cursor.y }+ 30}px` }}
-//       >
-//         Your Text Here
-//       </div>
-// </div>)}
-
-// {status===false&&  (<div>
-  
-//   <div
-//           className="cursor-shadow-another"
-//           style={{ left: `${cursor.x}px`, top:`${ cursor.y}px` }}
-//         ></div>
-//         <h1>hello</h1>
-//         <div
-//           className="cursor-text-another"
-//           style={{ left: `${cursor.x}px`, top:`{${cursor.y }+ 30}px` }}
-//         >
-//           Your Text Here
-//         </div>
-//   </div>)}
-
-// {/* <div style={{ height: '100vh', overflow: 'hidden' }}>
-//       <Slider {...settings}>
-//         {pages.map(page => (
-//           <div key={page.id} style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-//             <h2>{page.content}</h2>
-//           </div>
-//         ))}
-//       </Slider>
-//     </div> */}
-
-
-// {/* <h1>Hello, world!</h1>
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-// <h1>Hello, world!</h1>
-
-//       <div style={{ marginTop: "150vh" }} />
-//       <ScrollToTop color='white' smooth /> */}
-//     </div>
-//   )
-// }
-import React from "react";
-import Card from "./Card";
-  export default function Main(){
-    const[status,setStatus]=React.useState(false);
-    const handleOnClickStatus=()=>{
-      setStatus(!status);
-    }
-    return (
-      <div>
-   <Card
-   status={status}
-   handleOnClickStatus={handleOnClickStatus}
-   />
+      </section>
       </div>
-    )
-  }
+ 
+  );
+}

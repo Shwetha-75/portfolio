@@ -1,13 +1,27 @@
 import React from 'react'
 import "./card.css";
-import { SlArrowDown } from "react-icons/sl";
+
 export default function Card(props) {
   const [onHoverMail,setOnHoverMail]=React.useState(false);
   const [onHoverLinkedIn,setOnHoverLinkedIn]=React.useState(false);
   const [onHoverLeetCode,setOnHoverLeetCode]=React.useState(false);
   const [onHoverHackerRank,setOnHoverHackerRank]=React.useState(false);
 
-  
+  const handleOnClickLinkedIn=()=>{
+    window.open('https://www.linkedin.com/in/shwetha-k-0948ab228/','')
+  }
+
+  const handleOnClickHackerRank=()=>{
+    window.open('https://www.hackerrank.com/profile/shwetha_675','')
+  }
+
+  const handleOnClickLeetCode=()=>{
+    window.open('https://leetcode.com/SHWETHA_K/','')
+  }
+
+  const handleOnClickGmail=()=>{
+    window.open('mailto:shwethak412@gmail.com','')
+  }
   return (
     <div >
 
@@ -17,12 +31,21 @@ export default function Card(props) {
         <ul>
          
         <li 
+        style={{
+          marginTop:'2%'
+        }}
+        onClick={handleOnClickLinkedIn}
         className={onHoverLinkedIn?'linkedIn-tag':''}
         onMouseOver={()=>setOnHoverLinkedIn(true)} 
         onMouseLeave={()=>setOnHoverLinkedIn(false)}>
             Linked In
           </li>
-          <li>
+          <li
+          onClick={handleOnClickGmail}
+          >
+
+
+          
            <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--g':""} style={{display:'inline-flex'}}>G</div> 
            <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--o-1':""} style={{display:'inline-flex'}}>o</div> 
            <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--o':""} style={{display:'inline-flex'}}>o</div> 
@@ -34,6 +57,7 @@ export default function Card(props) {
 
           </li>
           <li
+          onClick={handleOnClickLeetCode}
           className={onHoverLeetCode?'leetcode-tag':''}
           onMouseOver={()=>setOnHoverLeetCode(true)}
           onMouseLeave={()=>setOnHoverLeetCode(false)}
@@ -41,12 +65,12 @@ export default function Card(props) {
            Leet Code
           </li>
           <li
+          onClick={handleOnClickHackerRank}
           className={onHoverHackerRank?'hackerRank-tag':''}
           onMouseOver={()=>setOnHoverHackerRank(true)}
           onMouseLeave={()=>setOnHoverHackerRank(false)} >
            Hacker Rank
           </li>
-
         </ul>
         <div onClick={props.handleOnClickStatus}>
         
