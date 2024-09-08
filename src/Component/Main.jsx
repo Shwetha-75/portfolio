@@ -44,6 +44,9 @@ const handleOnClickGmail=()=>{
 
   return (
     <div className="App">
+      <div className="sider-navigation-bar">
+
+      </div>
       <header className="nav">
         <nav className="nav__container__actions">
           <ul>

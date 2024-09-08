@@ -7,7 +7,9 @@ function App() {
     <div >
      {/* <h1 style={{color:'white',backgroundColor:'red'}} >Hello</h1> */}
      <Main/>
-    
+    <div>
+      
+    </div>
   
     
     </div>

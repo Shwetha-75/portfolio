@@ -175,3 +175,52 @@
   transition: all 0.3s ease-in-out;
   color:rgb(211, 19, 19);
 }
+
+.sider-navigation-bar {
+  position: fixed; /* Fixed position to keep it in place */
+  top: 0;
+  right: 0; /* Stick it to the left side */
+  height: 10%; /* Full height */
+  width: 2%; /* Set width as needed */
+  background-color: #000000; /* Background color for the nav bar */
+  padding-top: 60px; /* Padding at the top for some spacing */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  transition: all 0.3s ease; /* Smooth transitions if needed */
+}
+.sider-navigation-bar{
+  position:fixed;
+  background-color: rgb(72, 72, 72);
+  width:2%;
+  z-index:9999;
+  float: right;
+  height:10%;
+ 
+ border-radius: 100px;
+
+}
+
+/* Style the list of links inside the nav */
+/* .sider-navigation-bar ul {
+  list-style-type: none;
+  padding: 0;
+} */
+
+/* .sider-navigation-bar ul li {
+
+  text-align: center;
+  color: white;
+  cursor: pointer;
+} */
+
+/* .sider-navigation-bar ul li:hover {
+  background-color: #000000; 
+   */
+  /* Highlight effect on hover */
+/* } */
+
+@media(max-width:1024px)
+{
+  .sider-navigation-bar{
+    padding:10px
+  }
+}

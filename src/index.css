@@ -8,10 +8,13 @@ body{
     text-align: center;
     width:100%;
     background: #000000;
+
   
   }
   body {
     background-color: #000000;
+    width:100%;
+    position:absolute;
   }
   .section {
     display: grid;
@@ -77,4 +80,11 @@ body{
   .nav__container__actions li:hover {
     text-decoration: underline;
   }
-  
+  *{
+    overflow: hidden;
+  }
+
+  @media(max-width:1024px)
+  {
+    
+  }
