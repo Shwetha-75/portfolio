@@ -2,7 +2,6 @@ body{
     background-color: black;
 }
 
-
 .App {
     font-family: sans-serif;
     text-align: center;
@@ -49,12 +48,34 @@ body{
   /* Specific section styling */
   #about,
   #projects,
-  #blog,
-  #contact {
-    background: rgb(5, 7, 39);
-    background: linear-gradient(90deg, rgb(2, 6, 57) 0%, hsl(261, 96%, 11%) 100%);
+  #blog{
+   
+    
   }
+  #projects{
+    backdrop-filter: blur(12px);
+    background: rgb(36, 7, 28);
+
+    background: linear-gradient(90deg, rgbrgb(36, 7, 28) 0%, hsl(261, 96%, 11%) 100%);
+    
+    background: -moz-linear-gradient(90deg, rgba(34, 1, 21, 0.883) 0%, rgb(50, 0, 36) 100%);
+    
+    background: -webkit-linear-gradient(90deg, rgb(45, 5, 37) 0%, rgb(25, 1, 28) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
+  }
+#blog{
+  backdrop-filter: blur(12px);
+  background: rgba(7, 56, 0, 0.999);
+
+  background: linear-gradient(90deg, rgb(0, 34, 10) 0%, hsl(131, 67%, 11%) 100%);
   
+  background: -moz-linear-gradient(90deg, rgba(4, 36, 18, 0.883) 0%, rgb(4, 49, 19) 100%);
+  
+  background: -webkit-linear-gradient(90deg, rgb(2, 58, 19) 0%, rgb(1, 37, 24) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
+}
   .nav {
     display: flex;
     align-items: center;
