@@ -4,13 +4,13 @@
   width: 100%;
     position:fixed;
     backdrop-filter: blur(12px);
-    background: rgb(5, 7, 39);
+    background: rgb(0, 0, 0);
 
-    background: linear-gradient(90deg, rgb(2, 6, 57) 0%, hsl(261, 96%, 11%) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, hsl(0, 0%, 0%) 100%);
     
-    background: -moz-linear-gradient(90deg, rgba(15, 5, 39, 0.883) 0%, rgb(27, 3, 77) 100%);
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.883) 0%, rgb(0, 0, 0) 100%);
     
-    background: -webkit-linear-gradient(90deg, rgb(5, 6, 17) 0%, rgb(5, 27, 51) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
     width:100%;

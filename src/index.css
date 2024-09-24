@@ -17,6 +17,7 @@ body{
   }
   .section {
     display: grid;
+    top:0;
     place-items: center;
     width: 100%;
     height: 100vh;
@@ -35,6 +36,7 @@ body{
   /* Active section styles */
   .active-section {
     opacity: 1;
+    
     transform: translateY(0);
     visibility: visible;
   }
@@ -45,53 +47,56 @@ body{
     transform: translateY(-100px); /* Slide out to the top */
   }
   
-  /* Specific section styling */
-  #about,
-  #projects,
-  #blog{
-   
-    
-  }
+ 
   #projects{
     backdrop-filter: blur(12px);
-    background: rgb(36, 7, 28);
-
-    background: linear-gradient(90deg, rgbrgb(36, 7, 28) 0%, hsl(261, 96%, 11%) 100%);
+    background: rgb(0, 0, 0);
+    color:white;
+    background: linear-gradient(90deg, rgbrgb(36, 7, 28) 0%, hsl(0, 0%, 0%) 100%);
     
-    background: -moz-linear-gradient(90deg, rgba(34, 1, 21, 0.883) 0%, rgb(50, 0, 36) 100%);
+    background: -moz-linear-gradient(90deg, rgba(34, 1, 21, 0.883) 0%, rgb(0, 0, 0) 100%);
     
-    background: -webkit-linear-gradient(90deg, rgb(45, 5, 37) 0%, rgb(25, 1, 28) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
   }
 #blog{
   backdrop-filter: blur(12px);
-  background: rgba(7, 56, 0, 0.999);
-
-  background: linear-gradient(90deg, rgb(0, 34, 10) 0%, hsl(131, 67%, 11%) 100%);
+  background: rgba(0, 0, 0, 0.999);
+  color:white;
+  background: linear-gradient(90deg, rgb(0, 34, 10) 0%, hsl(0, 0%, 0%) 100%);
   
-  background: -moz-linear-gradient(90deg, rgba(4, 36, 18, 0.883) 0%, rgb(4, 49, 19) 100%);
+  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.883) 0%, rgb(0, 0, 0) 100%);
   
-  background: -webkit-linear-gradient(90deg, rgb(2, 58, 19) 0%, rgb(1, 37, 24) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
 }
-  .nav {
+.nav {
+    cursor: pointer;
     display: flex;
     align-items: center;
     position: fixed;
-    top: -5px;
     z-index: 9999;
-    height: 70px;
+    gap:2rem;
     width: calc(100% - 1.5rem);
     background-color:transparent;
-    color: white;
+    color: rgb(135, 135, 135);
+    font-size: 1.6rem;
+    font-weight: bolder;;
+    margin-left: 5%;
+  }
+
+  .nav :hover{
+    transition: 0.9s all ease-in-out;
+    color:white;
   }
   
   .nav__container__actions ul {
     display: flex;
     gap: 1rem;
     list-style: none;
+   
   }
   
   .nav__container__actions li {

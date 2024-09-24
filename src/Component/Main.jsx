@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link} from "react-scroll";
 import "./card.css"
-
+import Contact from "./ContactCards/Main";
 export default function App() {
 
   const[status,setStatus]=React.useState(false);
@@ -44,67 +44,54 @@ const handleOnClickGmail=()=>{
 
   return (
     <div className="App">
-      <div className="sider-navigation-bar">
-
-      </div>
+      
       <header className="nav">
-        <nav className="nav__container__actions">
-          <ul>
-            <li>
-              <Link
+        <Link
                 activeClass="active"
                 smooth
                 spy
                 to="about"
                 onClick={() => handleSetActive("about")}>
                 ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link
+        </Link>
+        <Link
                 activeClass="active"
                 smooth
                 spy
                 to="projects"
                 onClick={() => handleSetActive("projects")}>
                 PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link
+        </Link>
+        <Link
                 activeClass="active"
                 smooth
                 spy
                 to="blog"
                 onClick={() => handleSetActive("blog")}>
                 BLOG
-              </Link>
-            </li>
-            <li>
-              <Link
+          </Link>
+          <Link
                 activeClass="active"
                 smooth
                 spy
                 to="contact"
-                onClick={() => handleSetActive("contact")}
-              >
+                onClick={() => handleSetActive("contact")}>
                 CONTACT ME
-              </Link>
-            </li>
-          </ul>
-        </nav>
+          </Link>
+           
+         
       </header>
 
    
       <section
-
         id="about"
+        style={{color:'white'}}
         className={`section 
           ${activeSection === "about" ?
              "active-section" : "hidden-section"} 
-             ${fadeOut && activeSection === "about" ? "fade-out" : ""}`}
-      >
-        ABOUT
+             ${fadeOut && activeSection === "about" ? "fade-out" : ""}`}>
+        Shwetha K 
+        Engineering Graduate
       </section>
 
       <section
@@ -115,7 +102,7 @@ const handleOnClickGmail=()=>{
           "hidden-section"} ${fadeOut && 
             activeSection === "projects" ? "fade-out" : ""}`}
       >
-        PROJECTS
+  Projects
       </section>
 
       <section
@@ -154,9 +141,7 @@ const handleOnClickGmail=()=>{
         onMouseLeave={()=>setOnHoverLinkedIn(false)}>
             Linked In
           </li>
-          <li
-          onClick={handleOnClickGmail}
-          >
+          <li onClick={handleOnClickGmail}>
 
 
           
