@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link} from "react-scroll";
 import "./card.css"
-import Contact from "./ContactCards/Main";
+// import Contact from "./ContactCards/Main";
+import Card from ".//CardContact/Card.jsx";
 export default function App() {
 
   const[status,setStatus]=React.useState(false);
@@ -48,6 +49,7 @@ const handleOnClickGmail=()=>{
       <header className="nav">
         <Link
                 activeClass="active"
+                className="active"
                 smooth
                 spy
                 to="about"
@@ -56,6 +58,7 @@ const handleOnClickGmail=()=>{
         </Link>
         <Link
                 activeClass="active"
+                className="active"
                 smooth
                 spy
                 to="projects"
@@ -64,6 +67,7 @@ const handleOnClickGmail=()=>{
         </Link>
         <Link
                 activeClass="active"
+                className="active"
                 smooth
                 spy
                 to="blog"
@@ -72,6 +76,7 @@ const handleOnClickGmail=()=>{
           </Link>
           <Link
                 activeClass="active"
+                className="active"
                 smooth
                 spy
                 to="contact"
@@ -111,7 +116,24 @@ const handleOnClickGmail=()=>{
           ${activeSection === "blog" ? "active-section" : "hidden-section"} 
           ${fadeOut && activeSection === "blog" ? "fade-out" : ""}`}
       >
-        BLOG
+         <div className="app">
+      <Card
+        title="Beautiful Landscape"
+        image="https://source.unsplash.com/random/300x200?nature"
+        description="A beautiful view of a scenic landscape."
+      />
+      <Card
+        title="City at Night"
+        image="https://source.unsplash.com/random/300x200?city"
+        description="A stunning view of the city skyline at night."
+      />
+      <Card
+        title="Forest Path"
+        image="https://source.unsplash.com/random/300x200?forest"
+        description="A peaceful path through the forest."
+      />
+      {/* Add more cards as needed */}
+    </div>
       </section>
 
       <section

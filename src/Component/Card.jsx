@@ -40,9 +40,7 @@ export default function Card(props) {
         onMouseLeave={()=>setOnHoverLinkedIn(false)}>
             Linked In
           </li>
-          <li
-          onClick={handleOnClickGmail}
-          >
+          <li  onClick={handleOnClickGmail}>
 
 
           

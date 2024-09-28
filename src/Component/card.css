@@ -224,3 +224,8 @@
     padding:10px
   }
 }
+@media(max-width:786px){
+  .active{
+    font-size:0.8rem;
+  }
+}
