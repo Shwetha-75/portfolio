@@ -1,15 +1,13 @@
 .div-tag-navigation-bar{
 
-  left: 0;
-  width: 100%;
+    left: 0;
+    width: 100%;
     position:fixed;
     backdrop-filter: blur(12px);
     background: rgb(0, 0, 0);
 
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, hsl(0, 0%, 0%) 100%);
-    
     background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.883) 0%, rgb(0, 0, 0) 100%);
-    
     background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
@@ -23,10 +21,7 @@
     border-bottom: solid 5px rgb(115, 115, 115);
     z-index:1000;
 }
-/* *{
-    width:100%;
-    height:100vh;
-} */
+
 
 .nav-tag-lit-items>li{
     text-align: center;
@@ -62,7 +57,7 @@
 
 }
 .text-tag{
-   margin-left:44%;
+  margin-left:44%;
   color:white;
   opacity:0;
 

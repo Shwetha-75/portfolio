@@ -1,17 +1,15 @@
-body{
-    background-color: black;
-}
 
 .App {
     font-family: sans-serif;
     text-align: center;
     width:100%;
-    background: #000000;
+   
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
 
   
   }
   body {
-    background-color: #000000;
+                                                                
     width:100%;
     position:absolute;
   }
@@ -48,67 +46,6 @@ body{
   }
   
  
-  #projects{
-    backdrop-filter: blur(12px);
-    background: rgb(0, 0, 0);
-    color:white;
-    background: linear-gradient(90deg, rgbrgb(36, 7, 28) 0%, hsl(0, 0%, 0%) 100%);
-    
-    background: -moz-linear-gradient(90deg, rgba(34, 1, 21, 0.883) 0%, rgb(0, 0, 0) 100%);
-    
-    background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
-  }
-#blog{
-  backdrop-filter: blur(12px);
-  background: rgba(0, 0, 0, 0.999);
-  color:white;
-  background: linear-gradient(90deg, rgb(0, 34, 10) 0%, hsl(0, 0%, 0%) 100%);
-  
-  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.883) 0%, rgb(0, 0, 0) 100%);
-  
-  background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
-}
-.nav {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    z-index: 9999;
-    gap:2rem;
-    width: calc(100% - 1.5rem);
-    background-color:transparent;
-    color: rgb(135, 135, 135);
-    font-size: 1.6rem;
-    font-weight: bolder;;
-    margin-left: 5%;
-  }
-
-  .nav :hover{
-    transition: 0.9s all ease-in-out;
-    color:white;
-  }
-  
-  .nav__container__actions ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-   
-  }
-  
-  .nav__container__actions li {
-    cursor: pointer;
-  }
-  
-  .nav__container__actions li:hover {
-    text-decoration: underline;
-  }
-  *{
-    overflow: hidden;
-  }
 
   @media(max-width:1024px)
   {
@@ -119,7 +56,8 @@ body{
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  
 }
 
 .app {
@@ -135,6 +73,9 @@ body {
   .app {
     justify-content: space-between;
   }
+  .nav{
+
+  }
 }
 
 @media (max-width: 768px) {
@@ -143,15 +84,4 @@ body {
     flex-direction: column;
     align-items: center;
   }
-}
-@media(hover:none){
-  .Main:hover {
-    transform: none;
-    background-color: initial; 
-  }
-}
-
-.Main:focus {
-  outline: none;
-  background-color: initial; 
 }

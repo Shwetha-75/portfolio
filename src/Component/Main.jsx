@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link} from "react-scroll";
-import "./card.css"
+import "./card.css";
 // import Contact from "./ContactCards/Main";
 import Card from ".//CardContact/Card.jsx";
+import NavigationBar from "./NavigationBar/NavigationBar.jsx";
 export default function App() {
 
-  const[status,setStatus]=React.useState(false);
-  const [onHoverMail,setOnHoverMail]=React.useState(false);
+const[status,setStatus]=React.useState(false);
+const [onHoverMail,setOnHoverMail]=React.useState(false);
 const [onHoverLinkedIn,setOnHoverLinkedIn]=React.useState(false);
 const [onHoverLeetCode,setOnHoverLeetCode]=React.useState(false);
 const [onHoverHackerRank,setOnHoverHackerRank]=React.useState(false);
@@ -46,46 +47,10 @@ const handleOnClickGmail=()=>{
   return (
     <div className="App">
       
-      <header className="nav">
-        <Link
-                activeClass="active"
-                className="active"
-                smooth
-                spy
-                to="about"
-                onClick={() => handleSetActive("about")}>
-                ABOUT
-        </Link>
-        <Link
-                activeClass="active"
-                className="active"
-                smooth
-                spy
-                to="projects"
-                onClick={() => handleSetActive("projects")}>
-                PROJECTS
-        </Link>
-        <Link
-                activeClass="active"
-                className="active"
-                smooth
-                spy
-                to="blog"
-                onClick={() => handleSetActive("blog")}>
-                BLOG
-          </Link>
-          <Link
-                activeClass="active"
-                className="active"
-                smooth
-                spy
-                to="contact"
-                onClick={() => handleSetActive("contact")}>
-                CONTACT ME
-          </Link>
-           
-         
-      </header>
+     <NavigationBar
+      
+      handleSetActive={handleSetActive}
+     />
 
    
       <section
@@ -165,8 +130,6 @@ const handleOnClickGmail=()=>{
           </li>
           <li onClick={handleOnClickGmail}>
 
-
-          
            <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--g':""} style={{display:'inline-flex'}}>G</div> 
            <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--o-1':""} style={{display:'inline-flex'}}>o</div> 
            <div onMouseOver={()=>setOnHoverMail(true)} onMouseLeave={()=>setOnHoverMail(false)} className={onHoverMail?'google-tag-div--o':""} style={{display:'inline-flex'}}>o</div> 
