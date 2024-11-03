@@ -4,18 +4,13 @@
     width: 100%;
     position:fixed;
     backdrop-filter: blur(12px);
-    background: rgb(0, 0, 0);
-
-    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, hsl(0, 0%, 0%) 100%);
-    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.883) 0%, rgb(0, 0, 0) 100%);
-    background: -webkit-linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458e", GradientType=1 );
+    
     width:100%;
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
-   
+    top:0;
     cursor: pointer;
     color:white;
     border-bottom: solid 5px rgb(115, 115, 115);
@@ -27,13 +22,11 @@
     text-align: center;
     text-decoration: none;
     list-style: none;
-    margin-top:95%;
+    margin-top:100%;
     transition: all  0.5s ease-in-out;
    
  }
- .nav-tag-lit-items{
-   
- }
+
 
   #myNav{
     transition: all 0.5s  ease-in-out;
@@ -64,11 +57,8 @@
 }
 .div-tag-navigation-bar>ul>li{
   margin-top:7%;
+}
 
-}
-.arrow-tag-hidden{
-    
-}
 @media(max-width:900px) {
   .div-tag-navigation-bar>ul>li{
         text-align: center;
@@ -116,6 +106,7 @@
   font-family: cursive;
 
 }
+
 
 .hackerRank-tag{
   transition: all 1s ease-in-out;
@@ -194,24 +185,7 @@
 
 }
 
-/* Style the list of links inside the nav */
-/* .sider-navigation-bar ul {
-  list-style-type: none;
-  padding: 0;
-} */
 
-/* .sider-navigation-bar ul li {
-
-  text-align: center;
-  color: white;
-  cursor: pointer;
-} */
-
-/* .sider-navigation-bar ul li:hover {
-  background-color: #000000; 
-   */
-  /* Highlight effect on hover */
-/* } */
 
 @media(max-width:1024px)
 {

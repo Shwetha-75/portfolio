@@ -10,8 +10,10 @@ export default function NavigationBar(props) {
 
   return (
     <>
-    <header className="nav">
+    <header  className="nav">
+  
         <Link
+                
                 activeClass="active"
                 className="active"
                 smooth
@@ -47,6 +49,7 @@ export default function NavigationBar(props) {
                 onClick={() => {props.handleSetActive("contact")}}>
               Contact
           </Link>
+          
       </header>
     </>
   )

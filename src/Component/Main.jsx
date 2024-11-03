@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link} from "react-scroll";
 import "./card.css";
 // import Contact from "./ContactCards/Main";
 import Card from ".//CardContact/Card.jsx";
@@ -46,11 +45,11 @@ const handleOnClickGmail=()=>{
 
   return (
     <div className="App">
-      
+     
      <NavigationBar
-      
       handleSetActive={handleSetActive}
      />
+   
 
    
       <section
@@ -70,17 +69,15 @@ const handleOnClickGmail=()=>{
           "projects" ? 
           "active-section" : 
           "hidden-section"} ${fadeOut && 
-            activeSection === "projects" ? "fade-out" : ""}`}
-      >
-  Projects
+          activeSection === "projects" ? "fade-out" : ""}`}>
+          Projects
       </section>
 
       <section
         id="blog"
         className={`section 
           ${activeSection === "blog" ? "active-section" : "hidden-section"} 
-          ${fadeOut && activeSection === "blog" ? "fade-out" : ""}`}
-      >
+          ${fadeOut && activeSection === "blog" ? "fade-out" : ""}`}>
          <div className="app">
       <Card
         title="Beautiful Landscape"
@@ -99,14 +96,14 @@ const handleOnClickGmail=()=>{
       />
       {/* Add more cards as needed */}
     </div>
+
       </section>
 
       <section
         id="contact"
         className={`section 
           ${activeSection === "contact" ? "active-section" : "hidden-section"} 
-          ${fadeOut && activeSection === "contact" ? "fade-out" : ""}`}
-      >
+          ${fadeOut && activeSection === "contact" ? "fade-out" : ""}`} >
         CONTACT ME
     
       <nav 
@@ -162,8 +159,6 @@ const handleOnClickGmail=()=>{
        </div>
         
         </nav>   
-     
-
       </section>
       </div>
  

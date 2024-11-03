@@ -1,16 +1,23 @@
 
+/* Disable tap highlight for iOS Safari and Android */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+
 .App {
     font-family: sans-serif;
     text-align: center;
     width:100%;
-   
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-
-  
+    background:black;
   }
   body {
                                                                 
     width:100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
     position:absolute;
   }
   .section {
@@ -44,37 +51,13 @@
     opacity: 0;
     transform: translateY(-100px); /* Slide out to the top */
   }
-  
- 
 
-  @media(max-width:1024px)
-  {
-    
-  }
 
-  /* src/App.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  
-}
-
-.app {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px; /* Spacing between cards */
-}
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .app {
     justify-content: space-between;
-  }
-  .nav{
-
   }
 }
 

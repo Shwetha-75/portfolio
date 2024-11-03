@@ -31,9 +31,7 @@ export default function Card(props) {
         <ul>
          
         <li 
-        style={{
-          marginTop:'2%'
-        }}
+        
         onClick={handleOnClickLinkedIn}
         className={onHoverLinkedIn?'linkedIn-tag':''}
         onMouseOver={()=>setOnHoverLinkedIn(true)} 
