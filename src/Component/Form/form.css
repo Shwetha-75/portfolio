@@ -1,18 +1,44 @@
-.input--tag{
+/* auto fill */
+input:-webkit-autofill {
+    background: transparent !important;
+    box-shadow: 0 0 0 1000px transparent inset !important; /* Ensures background remains transparent */
+    color: rgb(199, 196, 196) !important;
+    -webkit-text-fill-color: rgb(199, 196, 196) !important; /* Ensures text color for autofill */
+    transition: background 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+.form--tag--input{
     background:transparent;
-    border: none;
-    border-bottom:2px solid rgb(117, 116, 116);
+    border:none;
     outline:none;
-    color:rgb(193, 191, 191);
+    color:rgb(199, 196, 196);
+    font-size: 1.6rem;
 }
-.form--tag{
-    display: flex;
-    flex-direction: column;
- 
+
+.form--tag--div{
+    border:2px solid white;
+    width:80%;
+    margin-left:10%;
+    height:60vh;
 }
-.btn--input--form--tag{
-    width:10%;
-    height: 45px;
-    border-radius:100px;
-    
+
+.input--tag--label{
+    font-size: 1.6rem;
 }
+.email--tag--label{
+    font-size: 1.6rem;
+  
+}
+@media(max-width:768px){
+    .input--tag--label{
+        font-size: 0.6rem;
+    }
+    .form--tag--input{
+        background:transparent;
+        border:none;
+        outline:none;
+        color:rgb(199, 196, 196);
+        font-size: 0.6rem;
+    }
+}
+
