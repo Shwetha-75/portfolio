@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./card.css";
 // import Contact from "./ContactCards/Main";
 import Card from ".//CardContact/Card.jsx";
+import Main from "./Form/Main.jsx";
 import NavigationBar from "./NavigationBar/NavigationBar.jsx";
 export default function App() {
 
@@ -114,7 +115,7 @@ const handleOnClickGmail=()=>{
           listStyle:'none'
         }}
         >
-         
+         <li><Main/></li>
         <li 
         style={{
           marginTop:'2%'
