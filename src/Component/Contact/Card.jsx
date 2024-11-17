@@ -1,6 +1,6 @@
 import React from 'react'
 import "./card.css";
-import Main from './Form/Main';
+import Main from '../Form/Main';
 export default function Card(props) {
   const [onHoverMail,setOnHoverMail]=React.useState(false);
   const [onHoverLinkedIn,setOnHoverLinkedIn]=React.useState(false);
@@ -23,7 +23,7 @@ export default function Card(props) {
     window.open('mailto:shwethak412@gmail.com','')
   }
   return (
-    <div >
+    < >
     
       <nav 
       id={props.status?"myNav":"hidden"}
@@ -36,7 +36,7 @@ export default function Card(props) {
         className={onHoverLinkedIn?'linkedIn-tag':''}
         onMouseOver={()=>setOnHoverLinkedIn(true)} 
         onMouseLeave={()=>setOnHoverLinkedIn(false)}>
-            LinkedIn
+            Linked In
           </li>
           <li  onClick={handleOnClickGmail}>
 
@@ -76,6 +76,6 @@ export default function Card(props) {
         </nav>   
     
    
-    </div>
+    </>
   )
 }

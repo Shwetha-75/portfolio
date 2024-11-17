@@ -14,7 +14,7 @@
     cursor: pointer;
     color:white;
     border-bottom: solid 5px rgb(115, 115, 115);
-    z-index:1000;
+    z-index:9999;
 }
 
 
@@ -197,4 +197,9 @@
   .active{
     font-size:0.8rem;
   }
+}
+
+.list--tag--contact{
+  display:flex;
+  flex-direction: column;
 }
