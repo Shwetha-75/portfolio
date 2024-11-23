@@ -1,30 +1,29 @@
 import React, { useState } from "react";
 import "./Contact/card.css";
-import DataSet from "./Data_Set/data_set.js";
-import Card from ".//CardContact/Card.jsx";
-import Contact from "./Contact/Card.jsx";
 import NavigationBar from "./NavigationBar/NavigationBar.jsx";
 export default function App() {
 
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("home");
   const [fadeOut, setFadeOut] = useState(false);
-  const array=DataSet.map((data)=>{
-    return(
-      <Card
-      title={data.title}
-      image={data.image}
-      description={data.description}
-      />
-    )
-  })
+
+  // const array=DataSet.map((data)=>{
+  //   return(
+  //     <Card
+  //     title={data.title}
+  //     image={data.image}
+  //     description={data.description}
+  //     />
+  //   )
+  // })
 
   const handleSetActive = (to) => {
-    setFadeOut(true); // Start fading out current section
-
-    // Delay switching section until the fade out is done
-    setTimeout(() => {
+      setFadeOut(true); 
+      // Start fading out current section
+      // Delay switching section until the fade out is done
+      setTimeout(() => {
       setActiveSection(to);
-      setFadeOut(false); // Remove fade effect for the new section
+      setFadeOut(false); 
+      // Remove fade effect for the new section
     }, 600); 
   };
 
@@ -32,47 +31,61 @@ export default function App() {
     <div className="App">
      
      <NavigationBar
-      handleSetActive={handleSetActive}
-     />
+      handleSetActive={handleSetActive}/>
+
+     <div className="content-wrapper">
+      
+      <section
+        id="home"
+        style={{color:'white'}}
+        className={`section 
+        ${activeSection === "home" ?
+        "active-section" : "hidden-section"} 
+        ${fadeOut && activeSection === "home" ? "fade-out" : ""}`}>
+        Landing page
+      </section>
+
       <section
         id="about"
         style={{color:'white'}}
         className={`section 
-          ${activeSection === "about" ?
-             "active-section" : "hidden-section"} 
-             ${fadeOut && activeSection === "about" ? "fade-out" : ""}`}>
-        Shwetha K 
-        Engineering Graduate
+        ${activeSection === "about" ?
+        "active-section" : "hidden-section"} 
+        ${fadeOut && activeSection === "about" ? "fade-out" : ""}`}>
+        Shwetha K Engineering Graduate
       </section>
 
       <section
         id="projects"
-        className={`section ${activeSection === 
-          "projects" ? 
-          "active-section" : 
-          "hidden-section"} ${fadeOut && 
-          activeSection === "projects" ? "fade-out" : ""}`}>
-          Projects
+        style={{color:'white'}}
+        className={`section 
+        ${activeSection ==="projects" ? 
+        "active-section" :"hidden-section"} 
+        ${fadeOut && activeSection === "projects" ? "fade-out" : ""}`}>
+        Projects
       </section>
 
       <section
-        id="blog"
+        id="experience"
+        style={{color:'white'}}
         className={`section 
-          ${activeSection === "blog" ? "active-section" : "hidden-section"} 
-          ${fadeOut && activeSection === "blog" ? "fade-out" : ""}`}>
-         <div className="app">
-          {array}
-         </div>
+        ${activeSection === "experience" ? 
+        "active-section" : "hidden-section"} 
+        ${fadeOut && activeSection === "experience" ? "fade-out" : ""}`}>
+        Intern
       </section>
 
       <section
         id="contact"
+        style={{color:'white'}}
         className={`section 
-          ${activeSection === "contact" ? "active-section" : "hidden-section"} 
-          ${fadeOut && activeSection === "contact" ? "fade-out" : ""}`} >
+        ${activeSection === "contact" ? 
+        "active-section" : "hidden-section"} 
+        ${fadeOut && activeSection === "contact" ? "fade-out" : ""}`} >
         CONTACT ME
-        <Contact/>
       </section>
+
+      </div>
       </div>
  
   );

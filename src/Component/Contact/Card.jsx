@@ -24,8 +24,7 @@ export default function Card(props) {
   }
   return (
     < >
-    
-      <nav 
+      {/* <nav 
       id={props.status?"myNav":"hidden"}
            className="div-tag-navigation-bar">
         <ul>
@@ -73,9 +72,9 @@ export default function Card(props) {
           
        </div>
         
-        </nav>   
+        </nav>    */}
     
-   
+   <h1 color='white'>Contact Me </h1>
     </>
   )
 }
