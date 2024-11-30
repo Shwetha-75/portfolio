@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Contact/card.css";
-import NavigationBar from "./NavigationBar/NavigationBar.jsx";
+import "./Component/Contact/card.css";
 import { Link } from "react-router-dom";
+import NavigationBar from "./Component/NavigationBar/NavigationBar";
 export default function App() {
 
   const [activeSection, setActiveSection] = useState("home");
@@ -43,7 +43,7 @@ export default function App() {
         ${activeSection === "home" ?
         "active-section" : "hidden-section"} 
         ${fadeOut && activeSection === "home" ? "fade-out" : ""}`}>
-        <Link to='/'>Home Landing page</Link>
+       <Link to='/' style={{color:'white'}}>Project Landing page</Link>
       </section>
 
       <section
@@ -53,7 +53,7 @@ export default function App() {
         ${activeSection === "about" ?
         "active-section" : "hidden-section"} 
         ${fadeOut && activeSection === "about" ? "fade-out" : ""}`}>
-                 <Link to='/about'>Shwetha K Engineering Graduate</Link>
+                 <Link to='/about' style={{color:'white'}}>Shwetha K Engineering Graduate</Link>
 
       </section>
 
@@ -64,7 +64,8 @@ export default function App() {
         ${activeSection ==="projects" ? 
         "active-section" :"hidden-section"} 
         ${fadeOut && activeSection === "projects" ? "fade-out" : ""}`}>
-         <Link to='/project'>Projects</Link>
+          <Link to='/project' style={{color:'white'}}> Projects</Link>
+       
       </section>
 
       <section
@@ -74,7 +75,8 @@ export default function App() {
         ${activeSection === "experience" ? 
         "active-section" : "hidden-section"} 
         ${fadeOut && activeSection === "experience" ? "fade-out" : ""}`}>
-      <Link to='/experience'>Intern</Link>
+                        <Link to='/experience' style={{color:'white'}}>Intern</Link>
+
       </section>
 
       <section
@@ -84,7 +86,8 @@ export default function App() {
         ${activeSection === "contact" ? 
         "active-section" : "hidden-section"} 
         ${fadeOut && activeSection === "contact" ? "fade-out" : ""}`} >
-     <Link to='/contact'>CONTACT ME</Link>
+                  <Link to='/contact' style={{color:'white'}}> CONTACT ME</Link>
+
       </section>
 
       </div>

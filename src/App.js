@@ -1,11 +1,17 @@
 import React from "react";
-import Main from "./Component/Main";
-import Project from "./Component/Projects/Project";
-import Experience from "./Component/Experience/Experience";
-import About from "./Component/About/About";
-import Contact from "./Component/Contact/Card";
-import Home from "./Component/Home/Home";
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import Main from "./Main";
+import Home from "./Component/Main";
+import About from "./AboutComponent/Main";
+import Project from "./ProjectComponent/Main";
+import Contact from "./ContactComponent/Main";
+import Experience from "./ExperienceComponent/Main";
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+// import Project from "./Component/Projects/Project";
+// import Experience from "./Component/Experience/Experience";
+// import About from "./Component/About/About";
+// import Contact from "./Component/Contact/Card";
+// import Home from "./Component/Home/Home";
+// import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 // import animatedGirl from './assets/animated-girl.gif';
 function App() {
 
@@ -21,18 +27,18 @@ function App() {
   return (
     <div className="Main">
     
-     <Main/>
+    
+    
      <Router>
-      <Routes>
-        <Route path='/'></Route>
-        <Route path='/about' element={<About/>}></Route>
-        <Route path='/home' element={<Home/>}></Route>
-        <Route path='/experience' element={<Experience/>}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/project' element={<Project/>}></Route>
-      </Routes>
-     </Router>
-  
+         <Main/>
+            <Routes>
+            <Route exact path='/' element={<Home/>}></Route>
+            <Route path='/about' element={<About/>}></Route>
+            <Route path='/project' element={<Project/>}></Route>
+            <Route path='/experience' element={<Experience/>}></Route>
+            <Route path='/contact' element={<Contact/>}></Route>
+            </Routes>
+        </Router>
     
     </div>
   );

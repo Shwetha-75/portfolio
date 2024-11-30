@@ -1,0 +1,43 @@
+.nav {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    gap:1rem;
+    width:100%;
+    color: #8b8888;
+    font-size:1.2rem;
+    font-family:Georgia, serif;
+    padding:3%;
+    outline: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+  }
+  
+  .active:hover {
+    transition: color 0.3s ease-in-out;
+      color: #3DA35D; 
+  }
+
+  *{
+    overflow: hidden;
+  }
+
+@media(max-width:768px){
+    .nav{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    gap:1rem; 
+    width:100%;
+    background-color:transparent;
+    color: rgb(204, 202, 202);
+    font-size:0.5rem;
+    font-family:Georgia, serif;
+    padding:8%;
+   }
+}
