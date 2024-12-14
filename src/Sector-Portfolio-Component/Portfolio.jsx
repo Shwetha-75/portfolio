@@ -4,81 +4,87 @@ import About from "../Sector-About-Component/About";
 import Experience from "../Sector-Experience-Component/Experience";
 import Projects from "../Sector-Projects-Component/Projects";
 import Contact from "../Sector-Contact-Component/Contact";
-
+import "../Sector-Portfolio-Component/portfolio.css";
 
 export default function Portfolio() {
+  
   const home_ref=React.useRef(null);
   const about_ref=React.useRef(null);
   const projects_ref=React.useRef(null);
   const experience_ref=React.useRef(null);
   const contact_ref=React.useRef(null);
+
+
+  const [activeId,setActiveId]=React.useState('');
+
+  const [homeColor,setHomeColor]=React.useState(false);
+  const [aboutColor,setAboutColor]=React.useState(false);
+
+
+  const handleOnClickScroll=(ref,value)=>{
+    if (value==='Home'){
+      setHomeColor(true);
+      setAboutColor(false);
+    }
+    else if(value==='About'){
+      setHomeColor(false);
+      setAboutColor(true);
+    }
+     ref.current.scrollIntoView({
+         behavior:'smooth',
+         transition:'1s'
+     })
+    setActiveId(value)
+  }
   
-
-  const handleOnClickHome=()=>{
-         home_ref.current.scrollIntoView({
-          behavior:'smooth'
-         })
-  }
-
-
-  const handleOnClickAbout=()=>{
-    about_ref.current.scrollIntoView({
-      behavior:'smooth'
-    })
-  };
-
-  const handleOnClickProject=()=>{
-    projects_ref.current.scrollIntoView({
-      behavior:'smooth'
-    })
-  }
-
-  const handleOnClickExperience=()=>{
-    experience_ref.current.scrollIntoView({
-      behavior:'smooth'
-    })
-  }
-  const handleOnClickContact=()=>{
-    contact_ref.current.scrollIntoView({
-      behavior:'smooth'
-    })
-  }
+  React.useEffect(()=>{
+    const handleOnScroll=()=>{
+        
+    }
+    window.addEventListener('scroll',handleOnScroll)
+    return ()=>{
+      window.removeEventListener('scroll',handleOnScroll)
+    }
+  },[activeId])
   return (
-    <div>
+    <>
       <nav
-      style={{
-        position:'fixed',
-        backgroundColor:'red',
-        width:'100%'
-      }}
+      className='navigationBar--tag'
+    
       >
-        <ul>
+        <ul >
           <li 
-          onClick={handleOnClickHome}
+          className={activeId==='Home' || homeColor ?'navigationBar--active':''}
+          onClick={()=>{handleOnClickScroll(home_ref,"Home")}}
+          
           >
            Home 
           </li>
 
           <li 
-          onClick={handleOnClickAbout}
+          className={activeId==='About' || aboutColor?'navigationBar--active':''}
+          onClick={()=>{handleOnClickScroll(about_ref,"About")}}
           >
            About 
           </li>
 
           <li 
-          onClick={handleOnClickProject}
+          className={activeId==='Projects'?'navigationBar--active':''}
+          onClick={()=>{handleOnClickScroll(projects_ref,"Projects")}}
           >
-           Project 
+           Project  
           </li>
 
           <li 
-          onClick={handleOnClickExperience}
+          className={activeId==='Experience'?'navigationBar--active':''}
+          onClick={()=>{handleOnClickScroll(experience_ref,"Experience")}}
           >
            Experience 
           </li>
           
           <li 
-          onClick={handleOnClickContact}
+          className={activeId==='Contact'?'navigationBar--active':''}
+          onClick={()=>{handleOnClickScroll(contact_ref,"Contact")}}
           >
            Contact 
           </li>
@@ -91,15 +97,15 @@ export default function Portfolio() {
       <About
       ref={about_ref}
       />
-      <Experience
-      ref={experience_ref}
-      />
       <Projects
       ref={projects_ref}
+      />
+      <Experience
+      ref={experience_ref}
       />
       <Contact
       ref={contact_ref}
       />
-    </div>
+    </>
   )
 }

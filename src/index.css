@@ -1,68 +1,30 @@
-
-/* Disable tap highlight for iOS Safari and Android */
-* {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+*{
+  background-color: black;
+  color:rgb(187, 179, 179);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: 0.9s;
+  width:100%;
+  transition-duration: 500ms;
 }
 
+.section--tag{
+margin-top:5%;
 
-.App {
-    font-family: sans-serif;
-    text-align: center;
-    width:100%;
-    background:black;
-  }
-  body {
-    overflow-y:scroll;                                                           
-    width:100%;
-    margin: 0;
-    font-family: Arial, sans-serif; 
-    position:absolute;
-  }
-  .section {
-    display: grid;
-    top:0;
-    place-items: center;
-    width: 100%;
-    height: 100vh;
-    font-size: 32px;
-    font-weight: bold;
-    transition: opacity 1s ease, transform 0.9s ease;
-  }
-  
-  /* Hidden sections are set to opacity 0 and translated up */
-  .hidden-section {
-    opacity: 0;
-    transform: translateY(-20px);
-    visibility: hidden; /* Ensure the hidden sections are not interactable */
-  }
-  
-  /* Active section styles */
-  .active-section {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-  
-  /* Fade out class for smooth transition */
-  .fade-out {
-    opacity: 0;
-    transform: translateY(-100px); /* Slide out to the top */
-  }
-
-
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .app {
-    justify-content: space-between;
-  }
 }
+html::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+html::-webkit-scrollbar-track {
+  background: black;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+html::-webkit-scrollbar-thumb {
+  backdrop-filter: blur(13px);
 
-@media (max-width: 768px) {
-  .app {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+  background: rgb(145, 145, 145,0.7);
+  border:none;
+  border-radius: 100px;
 }
