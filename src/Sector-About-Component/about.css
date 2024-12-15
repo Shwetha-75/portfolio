@@ -1,0 +1,28 @@
+.about--me--tag{
+    margin:0 auto;
+    height:100vh;
+    width:100%;
+    margin-top:10%;
+    
+}
+.about--me--tag>ul>li{
+    list-style: none;
+    
+}
+.about--me--tag>ul{
+ text-align: center;
+ line-height: 5rem ;
+}
+.about--me--tag>ul>li>p{
+    display: inline;
+    font-family: "Ibarra Real Nova", serif;
+    color:rgb(204, 203, 203);
+    font-size: 1.8rem;
+    margin-left:0.4%;
+    cursor: pointer;
+}
+.about--me--tag>ul>li>p:hover{
+    transition: 1.4s;
+    color:rgb(255, 255, 255);
+
+}

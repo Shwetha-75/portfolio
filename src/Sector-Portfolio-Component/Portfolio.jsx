@@ -7,7 +7,7 @@ import Contact from "../Sector-Contact-Component/Contact";
 import "../Sector-Portfolio-Component/portfolio.css";
 
 export default function Portfolio() {
-  
+
   const home_ref=React.useRef(null);
   const about_ref=React.useRef(null);
   const projects_ref=React.useRef(null);
@@ -56,7 +56,6 @@ export default function Portfolio() {
           <li 
           className={activeId==='Home' || homeColor ?'navigationBar--active':''}
           onClick={()=>{handleOnClickScroll(home_ref,"Home")}}
-          
           >
            Home 
           </li>
