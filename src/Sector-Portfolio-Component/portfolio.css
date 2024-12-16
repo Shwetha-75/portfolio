@@ -5,8 +5,9 @@ body{
     margin: 0 auto;
     position:fixed;
     z-index: 999;
-    height:80px;
+    height:150px;
     width:100%;
+    text-align: center;
     top:0;
     backdrop-filter: blur(13px);
     background-color: rgba(0, 0, 0, 0.2);
@@ -33,5 +34,6 @@ body{
 .navigationBar--tag>ul{
     background-color: transparent;
     text-align: center;
+    margin-top:5%;  
     
 }

@@ -1,7 +1,7 @@
 .home--page--tag{
     display: flex;
     height:100vh;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 .line{
     border-left: 6px solid rgb(169, 166, 4);
