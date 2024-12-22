@@ -1,22 +1,18 @@
 import React,{forwardRef} from 'react'
-
+import "./experience.css"
 export default forwardRef(
     function Experience(props,ref) {
 
-        //  const windowWidth = React.useRef(window.innerWidth);
-        //           const windowHeight = React.useRef(window.innerHeight);
-                
-        //           console.log('width: ', windowWidth.current);
-        //           console.log('height: ', windowHeight.current);
-        // console.log("Hey I'm Experience executing here ")
         
         return (
           <div 
           className='section--tag'
-          
+          id="experience--tag"
           ref={ref}>
-            <h1>Experience</h1>
-           
+          <div className='w-100 border mt-40 border-sky-500 h-[500px] '>
+
+            <h1>contact</h1>
+          </div>
           </div>
         )
       }

@@ -1,39 +1,18 @@
 import React, { forwardRef } from 'react'
-
+import "./contact.css"
 export default forwardRef(
     function Contact(props,ref) {
-        //  const windowWidth = React.useRef(window.innerWidth);
-        //           const windowHeight = React.useRef(window.innerHeight);
-                
-        //           console.log('width: ', windowWidth.current);
-        //           console.log('height: ', windowHeight.current);
-        // console.log("Hey I'm Contact executing here ")
+       
 
         return (
           <div 
           className='section--tag'
+          id="contact--tag"
           ref={ref}>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
-            <h1>Contact</h1>
+          <div className='w-100 border border-sky-500 h-[500px] '>
+
+            <h1>contact</h1>
+          </div>
           </div>
         )
       }
