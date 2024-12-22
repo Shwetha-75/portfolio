@@ -11,7 +11,7 @@ export default forwardRef(
           ref={ref}>
           <div className='w-100 border mt-40 border-sky-500 h-[500px] '>
 
-            <h1>contact</h1>
+           
           </div>
           </div>
         )

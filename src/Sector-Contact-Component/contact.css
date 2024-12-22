@@ -1,3 +1,18 @@
 #contact--tag{
-    margin-top:10%
+    height:100vh;
+    margin-top:20%;
+}
+textarea{
+    height:40%;
+    resize: none;
+   
+    border:2px solid white;
+   
+   
+
+}
+input{
+    height:17%;
+    
+    border:2px solid white;
 }
