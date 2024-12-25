@@ -7,7 +7,6 @@ export default forwardRef(
 
     function Projects(props,ref) {
       
-       
     
          const array=data.map((item)=>(
           <div key={item.id} id="card--tag"  className='bg-black ml-10 h-50 text-white rounded-xl border border-lime-500' >
@@ -24,14 +23,13 @@ export default forwardRef(
 
         return (
           <div className='section--tag ' ref={ref}>
-          <div className='w-5/6 m-auto'>
+          <div className='w-3/4 m-auto'>
           <div className='mt-10' id="project--tag" style={{display:'flex'}}>
+      
+        {array}
+      
         
-         {array}
        
-           
-           
-          
            </div>
 
            </div>

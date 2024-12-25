@@ -3,16 +3,79 @@
     margin-top:20%;
 }
 textarea{
-    height:40%;
+    height:130px;
     resize: none;
+    text-align: justify;
+    font-family: "Ibarra Real Nova", serif;
+    outline:none;
+    font-size: 1.2rem;
+    border:2px solid rgb(30, 30, 30);
+}
+
+textarea::placeholder{
+  font-family: "Ibarra Real Nova", serif;
+  text-align: center;
+  font-size: 1.8rem;
+}
+input::placeholder{
+  font-family: "Ibarra Real Nova", serif;
+  text-align: center;
+  font-size: 1.4rem;
+ 
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+
+  }
    
-    border:2px solid white;
+  textarea::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+    background: transparent
+  }
    
-   
+  textarea::-webkit-scrollbar-thumb {
+    backdrop-filter: blur(13px);
+    background: rgba(175, 194, 6, 0.64);
+    border:none;
+    cursor: pointer;
+
+    border-radius: 100px;
+  }
+input{
+    height:60px;
+    text-align: center;
+    font-size: 1.4rem;
+    border-bottom:2px solid rgb(30, 30, 30);
+    font-family: "Ibarra Real Nova", serif;
+    outline:none;
+    
+}
+#form-btn:hover{
+    transition: 1s;
+    background: rgba(175, 194, 6, 0.64);
+    color:white;
+    justify-items: center;
+}
+
+input:focus, label:focus{
+  transition: 1s;
+  border:3px solid rgba(147, 159, 43, 0.64);
+
 
 }
-input{
-    height:17%;
-    
-    border:2px solid white;
+
+textarea:focus{
+  transition: 1s;
+  border:3px solid rgba(147, 159, 43, 0.64);
+
 }
+.header--contact--tag{
+  font-size:2rem;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bolder
+}
+
+

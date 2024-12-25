@@ -2,14 +2,33 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-*{
+
+/* removing the browser default styling on input tags */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(187, 179, 179);
+    -webkit-box-shadow: 0 0 0 40px black inset !important;
+
+}
+body,html{
   background-color: black;
+  color:rgb(187, 179, 179);
+}
+#root{
+  background-color: black;
+  color:rgb(187, 179, 179);
+}
+*{
+  background-color:   black;
   color:rgb(187, 179, 179);
   overflow-x: hidden;
   scroll-behavior: smooth;
-  transition: 0.9s;
+ 
   width:100%;
-  transition-duration: 500ms;
+ 
 }
 
 .section--tag{

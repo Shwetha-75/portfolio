@@ -1,27 +1,34 @@
 import React, { forwardRef } from 'react'
 import "./contact.css"
+
 export default forwardRef(
     function Contact(props,ref) {
        
 
         return (
-          <div 
-          className='section--tag' id="contact--tag"
-          ref={ref}>
-        <div className='w-100 border mt-40 border-sky-500 h-[500px] '>
+          <div className='section--tag' id="contact--tag" ref={ref}>
+        <div className='w-100  mt-40 flex h-[500px]'>
 
-            <div className=' ml-5 mt-5 h-[470px]  w-[50%]  '>
+            <div className='ml-5 mt-5 h-[470px]  w-[50%]'>
               {/* form */}
-              <from>
-                <input type='text'   name='name' placeholder='enter your name'/>
-                <input type='email' className='mt-5'  name='email' placeholder="enter your email"/>
-                <textarea  className='mt-5' placeholder='enter the message '/>
-                <button className='mt-5  px-4 py-3 border border-lime-900 w-[30%] bg-lime-900 rounded center' type='button'>Send</button>
-              </from>
+              <form>
+                <label for='name'>Enter your name: </label>
+                <input type='text'  id='name' name='name' />
+                <label for='email '>Enter your Email: </label>
+                <input type='email' className='mt-5' id='email'  name='email' />
+                <label for='message'>Enter your message: </label>
+                <textarea  className='mt-10' id='message' />
+                <div className='flex justify-center text-center'>
+                <button className='mt-5  px-4 py-3 border border-lime-900 w-[30%] bg-lime-900 rounded center' type='button' id="form-btn">Send</button>
 
                 </div>
-                <div>
-                  {/*logo's  */}
+                </form>
+              </div>
+
+
+                <div className='w-[50%] ml-[5%] header--contact--tag'>
+               
+                  <h1 className='text text-center mt-[20%]'>Drop a Message  </h1>
                 </div>
           </div>
           </div>
