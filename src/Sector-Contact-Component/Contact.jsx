@@ -12,14 +12,14 @@ export default forwardRef(
             <div className='ml-5 mt-5 h-[470px]  w-[50%]'>
               {/* form */}
               <form>
-                <label for='name'>Enter your name: </label>
-                <input type='text'  id='name' name='name' />
-                <label for='email '>Enter your Email: </label>
-                <input type='email' className='mt-5' id='email'  name='email' />
-                <label for='message'>Enter your message: </label>
+                <label for='name'>Enter your name <span className=" text-lime-100">*</span>{" "}: </label>
+                <input type='text'  id='name' name='name'  required />
+                <label for='email '>Enter your Email <span className=" text-lime-100">*</span>{" "}:</label>
+                <input type='email' className='mt-5' id='email'  name='email' required />
+                <label for='message'>Enter your message </label>
                 <textarea  className='mt-10' id='message' />
                 <div className='flex justify-center text-center'>
-                <button className='mt-5  px-4 py-3 border border-lime-900 w-[30%] bg-lime-900 rounded center' type='button' id="form-btn">Send</button>
+                <button className='mt-5  px-4 py-3 rounded-md border border-lime-900 w-[30%] bg-lime-900 rounded center' type='button' id="form-btn">Send</button>
 
                 </div>
                 </form>

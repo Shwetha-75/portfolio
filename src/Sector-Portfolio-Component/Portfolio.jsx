@@ -17,19 +17,10 @@ export default function Portfolio() {
 
   const [activeId,setActiveId]=React.useState('');
 
-  const [homeColor,setHomeColor]=React.useState(false);
-  const [aboutColor,setAboutColor]=React.useState(false);
-
+  
 
   const handleOnClickScroll=(ref,value)=>{
-    if (value==='Home'){
-      setHomeColor(true);
-      setAboutColor(false);
-    }
-    else if(value==='About'){
-      setHomeColor(false);
-      setAboutColor(true);
-    }
+    
      ref.current.scrollIntoView({
          behavior:'smooth',
          transition:'1s'
@@ -54,14 +45,14 @@ export default function Portfolio() {
       >
         <ul >
           <li 
-          className={activeId==='Home' || homeColor ?'navigationBar--active':''}
+          className={activeId==='Home'?'navigationBar--active':''}
           onClick={()=>{handleOnClickScroll(home_ref,"Home")}}
           >
            Home 
           </li>
 
           <li 
-          className={activeId==='About' || aboutColor?'navigationBar--active':''}
+          className={activeId==='About' ?'navigationBar--active':''}
           onClick={()=>{handleOnClickScroll(about_ref,"About")}}
           >
            About 

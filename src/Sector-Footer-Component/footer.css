@@ -1,0 +1,15 @@
+#footer--tag{
+    max-width: 100%;
+    color:white;
+}
+.list--tag--connections>li{
+   font-family:  "Ibarra Real Nova", serif;
+   font-size:1rem;
+   cursor: pointer;
+}
+
+.list--tag--connections>li:hover{
+    transition: 1s;
+   color:rgba(160, 160, 9, 0.807)
+ }
+
