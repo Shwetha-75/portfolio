@@ -8,11 +8,11 @@ import "../Sector-Portfolio-Component/portfolio.css";
 
 export default function Portfolio() {
 
-  const home_ref=React.useRef(null);
-  const about_ref=React.useRef(null);
-  const projects_ref=React.useRef(null);
-  const experience_ref=React.useRef(null);
-  const contact_ref=React.useRef(null);
+  const homeRef=React.useRef(null);
+  const aboutRef=React.useRef(null);
+  const projectsRef=React.useRef(null);
+  const experienceRef=React.useRef(null);
+  const contactRef=React.useRef(null);
 
 
   const [activeId,setActiveId]=React.useState('');
@@ -46,35 +46,35 @@ export default function Portfolio() {
         <ul >
           <li 
           className={activeId==='Home'?'navigationBar--active':''}
-          onClick={()=>{handleOnClickScroll(home_ref,"Home")}}
+          onClick={()=>{handleOnClickScroll(homeRef,"Home")}}
           >
            Home 
           </li>
 
           <li 
           className={activeId==='About' ?'navigationBar--active':''}
-          onClick={()=>{handleOnClickScroll(about_ref,"About")}}
+          onClick={()=>{handleOnClickScroll(aboutRef,"About")}}
           >
            About 
           </li>
 
           <li 
           className={activeId==='Projects'?'navigationBar--active':''}
-          onClick={()=>{handleOnClickScroll(projects_ref,"Projects")}}
+          onClick={()=>{handleOnClickScroll(projectsRef,"Projects")}}
           >
            Project  
           </li>
 
           <li 
           className={activeId==='Experience'?'navigationBar--active':''}
-          onClick={()=>{handleOnClickScroll(experience_ref,"Experience")}}
+          onClick={()=>{handleOnClickScroll(experienceRef,"Experience")}}
           >
            Experience 
           </li>
           
           <li 
           className={activeId==='Contact'?'navigationBar--active':''}
-          onClick={()=>{handleOnClickScroll(contact_ref,"Contact")}}
+          onClick={()=>{handleOnClickScroll(contactRef,"Contact")}}
           >
            Contact 
           </li>
@@ -82,19 +82,19 @@ export default function Portfolio() {
       </nav>
 
       <Home
-      ref={home_ref}
+      ref={homeRef}
       />
       <About
-      ref={about_ref}
+      ref={aboutRef}
       />
       <Projects
-      ref={projects_ref}
+      ref={projectsRef}
       />
       <Experience
-      ref={experience_ref}
+      ref={experienceRef}
       />
       <Contact
-      ref={contact_ref}
+      ref={contactRef}
       />
     </>
   )

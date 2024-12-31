@@ -1,4 +1,13 @@
 #experience--tag{
-    height:100vh;
+   
     margin-top:10%
 }
+.header--tag--skills{
+    font-family: "Ibarra Real Nova", serif;
+   font-size: 1.5rem;
+   font-weight: bold;
+   overflow-y: hidden;
+   
+}
+
+

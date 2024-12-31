@@ -1,0 +1,27 @@
+
+.content--tag {
+    overflow-y: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 2s ease-in-out, opacity 2s ease-in-out; /* Adjust timing for effect */
+}
+
+.active {
+    overflow-y: hidden;
+
+    max-height: 1000px; 
+    transition: max-height 2s ease-in-out, opacity 2s ease-in-out; /* Adjust timing for effect */
+     /* Set a large enough value to allow content expansion */
+    opacity: 1;
+}
+
+@keyframes fade {
+    0% { 
+        max-height: 0;
+        opacity: 0;
+    }
+    100% { 
+        max-height: 1000px;  /* Ensure this is large enough to fit your content */
+        opacity: 1;
+    }
+}

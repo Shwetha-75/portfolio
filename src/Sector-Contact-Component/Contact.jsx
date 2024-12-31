@@ -67,7 +67,7 @@ export default forwardRef(
               {/* form */}
               <form onSubmit={handleOnSubmit} >
                 <label 
-                for='name'>
+                htmlFor='name'>
                   Enter your name 
                   <span 
                   className="text-lime-100">*</span>{" "}: 
@@ -80,7 +80,7 @@ export default forwardRef(
                 onChange={handleOnChange} required 
                 />
                 <label 
-                for='email '>
+                htmlFor='email '>
                   Enter your Email 
                   <span 
                   className="text-lime-100">*</span>{" "}:
@@ -94,7 +94,7 @@ export default forwardRef(
                 value={toSendMessage.reply_to}
                 required />
                 <label 
-                for='message'>
+                htmlFor='message'>
                   Enter your message 
                   </label>
                 <textarea  

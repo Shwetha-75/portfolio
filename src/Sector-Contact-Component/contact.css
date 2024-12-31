@@ -1,11 +1,8 @@
-#contact--tag{
-    height:100vh;
-    margin-top:20%;
-}
+
 textarea{
     height:130px;
     resize: none;
-    color:white;
+   
     text-align: justify;
     font-family: "Ibarra Real Nova", serif;
     outline:none;
@@ -35,14 +32,13 @@ textarea::-webkit-scrollbar {
     border-radius: 100px;
   }
 input{
-    height:60px;
+    height:50px;
     text-align: center;
     font-size: 1.2rem;
-   
     border-bottom:2px solid rgb(30, 30, 30);
     font-family: "Ibarra Real Nova", serif;
     outline:none;
-    color:white;  
+    
 }
 label{
   font-family: "Ibarra Real Nova", serif;
