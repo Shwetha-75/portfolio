@@ -24,13 +24,26 @@ export default forwardRef(
           ref={ref}>
           <div className='w-100  mt-40 h-[500px] flex '>
 
-            <div className='shadow hover:shadow-2xl w-[78%] mr-[3%] h-[450px] mt-[25px]'>
+            <div className='shadow hover:shadow-2xl w-[68%] mr-[3%] h-[450px] mt-[25px]'>
+             <div>
+             <h4>
+              Roles & Responsibilities
+            </h4>
+              <p>
+              <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+              <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+              <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>    
+              </p>
+              </div>
 
+              <div>
+
+                <h4>Experience</h4>
+              </div>
             </div>
-           <div className='skill--tag w-[20%] h-[450px] mt-[25px]'>
-
+           <div className='skill--tag w-[30%] h-[450px] mt-[25px]'>
+                <h3 className=' text-center mt-2 header--tag--skills'>Skills</h3>
             <div >
-              <h3 className='text-center mt-2 header--tag--skills'>Skills</h3>
               <AccordinComponent
               data={data}
               onClick={handleOnClickOpen}

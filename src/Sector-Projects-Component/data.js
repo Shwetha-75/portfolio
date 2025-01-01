@@ -22,6 +22,20 @@ var data=[
         name:"text_3",
         para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
+    },{
+        id:4,
+        image:Image1,
+        name:"text_4",
+        para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
+    },
+
+    {
+        id:5,
+        image:Image2,
+        name:"text_5",
+        para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
     },
     
     

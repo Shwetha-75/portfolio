@@ -6,7 +6,9 @@
     transition: max-height 2s ease-in-out, opacity 2s ease-in-out; /* Adjust timing for effect */
 }
 
-
+.accordin--tag{
+    cursor:pointer
+}
 
 .active {
     overflow-y: hidden;

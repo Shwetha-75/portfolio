@@ -8,13 +8,13 @@ export default function AccordinComponent(props) {
 
      const array=props.data.map((item)=>(
       <div  key={item.id}>
-      <div className='accordin--tag flex'>
+      <div className='accordin--tag flex mt-3' onClick={()=>props.onClick(item.id)}>
                     <div className='py-2 w-100 '>{item.title}</div>
-                    <div onClick={()=>props.onClick(item.id)} className='py-2 w-10 text-lime-500'> 
+                    <div  className='py-2 w-10 text-lime-500'> 
                      {!item.isOpen ? <TiPlus  className='mt-[5px] ' />:< TiMinus className='mt-[5px]' />} 
                     </div>
             </div>
-            <div className={item.isOpen?'active':"content--tag"}>
+            <div className={item.isOpen?'active mt-5':"content--tag mt-5"}>
               {item.content}
             </div>
 

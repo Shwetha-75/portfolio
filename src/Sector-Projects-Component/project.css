@@ -16,5 +16,9 @@
   opacity: 1;
 
 }
+.btn--project:hover{
+  transition: 2s;
+  background-color: rgba(212, 231, 37, 0.246);
+}
 
 
