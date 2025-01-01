@@ -1,7 +1,4 @@
-#experience--tag{
-   
-    margin-top:10%
-}
+
 .header--tag--skills{
     font-family: "Ibarra Real Nova", serif;
    font-size: 1.5rem;
@@ -9,5 +6,23 @@
    overflow-y: hidden;
    
 }
+.skill--tag::-webkit-scrollbar {
+    width: 1px;
+    cursor: pointer;
 
+  }
+   
+.skill--tag::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+    background: transparent
+  }
+   
+.skill--tag::-webkit-scrollbar-thumb {
+    backdrop-filter: blur(13px);
+    background: rgba(175, 194, 6, 0.64);
+    border:none;
+    cursor: pointer;
 
+    border-radius: 100px;
+  }

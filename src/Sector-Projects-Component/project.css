@@ -4,8 +4,10 @@
 }
 
 #card--tag{
+  width:100%;
   opacity: 0.6;
   cursor:pointer;
+  overflow-y: hidden;
 }
 
 
@@ -14,4 +16,5 @@
   opacity: 1;
 
 }
+
 
