@@ -26,3 +26,47 @@
 
     border-radius: 100px;
   }
+  .role--tag--heading{
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 2rem;
+    font-weight: bolder;
+
+  }
+  .experience--tag{
+
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 2rem;
+    font-weight: bolder;
+   
+
+  }
+  .list--tag--paragraph>p{
+   list-style: circle;
+
+   text-align: justify;
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1.2rem;
+
+  }
+li::marker{
+    color:rgba(255, 255, 0, 0.874);
+  }
+  .experience--tag--role::-webkit-scrollbar {
+    width: 1px;
+    cursor: pointer;
+
+  }
+   
+.experience--tag--role::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+    background: transparent
+  }
+   
+.experience--tag--role::-webkit-scrollbar-thumb {
+    backdrop-filter: blur(13px);
+    background: rgba(175, 194, 6, 0.64);
+    border:none;
+    cursor: pointer;
+    border-radius: 100px;
+  }

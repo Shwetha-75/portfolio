@@ -3,16 +3,24 @@
     overflow-y: hidden;
     max-height: 0;
     opacity: 0;
+    font-family: "Ibarra Real Nova", serif;
     transition: max-height 2s ease-in-out, opacity 2s ease-in-out; /* Adjust timing for effect */
 }
 
 .accordin--tag{
     cursor:pointer
 }
+.accordin--tag--heading{
+    font-family: "Ibarra Real Nova", serif;
+    font-size:1.2rem;
+    font-weight:bold;
+}
 
 .active {
     overflow-y: hidden;
-
+    line-height: 1.9rem;
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1rem;
     max-height: 1000px; 
     transition: max-height 2s ease-in-out, opacity 2s ease-in-out; /* Adjust timing for effect */
      /* Set a large enough value to allow content expansion */

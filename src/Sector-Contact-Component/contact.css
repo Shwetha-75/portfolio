@@ -12,7 +12,7 @@ textarea{
 
 
 textarea::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
     cursor: pointer;
 
   }
@@ -41,6 +41,7 @@ input{
     
 }
 label{
+  font-size: 1.2rem;
   font-family: "Ibarra Real Nova", serif;
   font-weight: bold;
 }

@@ -37,3 +37,9 @@ body{
     margin-top:5%;  
     
 }
+
+@media(min-width:2800px){
+    .navigationBar--tag{
+        height:auto;
+    }
+}
