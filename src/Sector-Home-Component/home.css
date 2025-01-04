@@ -1,6 +1,7 @@
 .home--page--tag{
     display: flex;
-   
+    width:90%;
+    margin-left: 5%;
     margin-top: 20%;
 }
 .line{
@@ -19,6 +20,14 @@
     font-family: "Ibarra Real Nova", serif;
     color:rgb(204, 203, 203);
     font-size: 1.8rem;
+    font-weight:bolder;
+
+}
+#title--tag{
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    gap:0.2rem;
 }
 .box--tag{
     border:2px solid rgb(127, 131, 4);
@@ -31,4 +40,19 @@
 .box--tag:hover{
     transition: 1s;
     border:2px solid rgb(212, 219, 8); 
+}
+.slider--tag--binary{
+    opacity:0.6;
+}
+.slider--tag--binary:hover{
+    opacity:1;
+    cursor: pointer;
+}
+.present--title--tag{
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.present--tag{
+    color:white;
 }

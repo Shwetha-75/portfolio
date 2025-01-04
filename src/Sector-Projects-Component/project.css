@@ -20,5 +20,38 @@
   transition: 2s;
   background-color: rgba(212, 231, 37, 0.246);
 }
+.sector--tag--overlay{
+position: absolute;
+background-attachment: fixed;
+}
 
 
+.popup-overlay {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  border:2px solid rgba(255, 255, 0, 0.404);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+ 
+}
+
+.popup-close {
+  
+  cursor: pointer;
+  background-color: transparent;
+}
