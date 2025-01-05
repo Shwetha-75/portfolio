@@ -55,3 +55,14 @@ background-attachment: fixed;
   cursor: pointer;
   background-color: transparent;
 }
+
+.text--project{
+  font-family: "Ibarra Real Nova", serif;
+  list-style-type: disc;
+  text-align: left  ;
+  width:100%;
+  text-justify: inter-word;
+}
+#tch{
+  font-family: "Ibarra Real Nova", serif;
+}

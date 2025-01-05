@@ -9,7 +9,7 @@ import { BiSolidUpArrow } from "react-icons/bi";
 function App() {
  
   const [arrowUp,setArrowUp]=React.useState(false);
- 
+   const [isMobile,setMobile]=React.useState(false);
   const handleOnClickScroll=()=>{
     window.scrollTo({
       left:0,
@@ -25,6 +25,23 @@ function App() {
    window.addEventListener('scroll',handleOnVisibleScroll);
    return ()=> window.removeEventListener('scroll',handleOnVisibleScroll);
   },[arrowUp]);
+
+
+  React.useEffect(()=>{
+    const handleSize=()=>{
+      setMobile(window.innerWidth<=768)
+    }
+    handleSize();
+    window.addEventListener('resize',handleSize);
+    return ()=>window.removeEventListener('resize',handleSize)
+  },[])
+
+   if (isMobile){
+    return (<div className="mobile-restriction">
+        <h1>Access Restricted</h1>
+        <p>This website is not available on mobile devices. Please use a desktop or larger screen.</p>
+      </div>)
+   }
 
   return(
     <>

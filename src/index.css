@@ -22,6 +22,7 @@ textarea:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 40px black inset !important;
 
 }
+
 body,html{
   background-color: black;
   color:rgb(187, 179, 179);
@@ -89,4 +90,24 @@ html::-webkit-scrollbar-thumb {
   color:yellow;
   background-color: rgba(255, 255, 0, 0.194);
   border-radius: 100px;
+}
+/* portfolio.css */
+.mobile-restriction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  color: #333;
+}
+
+.mobile-restriction h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-restriction p {
+  font-size: 1.2rem;
 }

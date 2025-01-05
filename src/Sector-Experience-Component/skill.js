@@ -2,26 +2,17 @@ const skill=[
     {
         id:0,
         content:`
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Contributing to the development and optimization of automation solutions to enhance operational efficiency.
         `
     },
     {
         id:1,
         content:`
     
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+             Collaborating with the team to identify process improvements and implement automated workflows using advanced tools and techniques.
         `
     },
-    {
-        id:2,
-        content:`
     
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        `
-    }
 ]
 
 export default skill;

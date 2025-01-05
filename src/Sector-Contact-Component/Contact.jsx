@@ -61,10 +61,11 @@ export default forwardRef(
 
         return (
           <div className='section--tag' id="contact--tag" ref={ref}>
+          
         <div className='w-100 ml-[10%] mt-40 flex h-[500px]'>
-
+       
             <div className='ml-5 mt-5 h-[470px]  w-[35%]'>
-              {/* form */}
+              {/* form */} 
               <form onSubmit={handleOnSubmit} >
                 <label 
                 htmlFor='name'>

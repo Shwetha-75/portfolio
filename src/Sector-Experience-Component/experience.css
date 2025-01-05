@@ -70,3 +70,35 @@ li::marker{
     cursor: pointer;
     border-radius: 100px;
   }
+
+  .paragraph-exp--title{
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:rgba(175, 194, 6, 0.74);
+    list-style: circle;
+
+  }
+  .list--tag--content{
+    list-style:disc;
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1rem;
+  }
+ .list--tag--content::marker{
+  color:rgba(255, 255, 0, 0.274);
+
+ }
+ .list---tech{
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1rem;
+  list-style: none;
+ }
+ .company--title{
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1.2rem;
+ }
+ .text--span{
+  font-family: "Ibarra Real Nova", serif;
+  font-style: italic;
+  font-size: 1.2rem;
+ }
