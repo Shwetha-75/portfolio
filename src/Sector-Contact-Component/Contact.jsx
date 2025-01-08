@@ -10,7 +10,7 @@ export default forwardRef(
 
        const [toSendMessage,setToSendMessage]=React.useState({
         from_name:'',
-        to_name:'Shweth K',
+        to_name:'',
         message:'',
         reply_to:''
        });
@@ -30,10 +30,10 @@ export default forwardRef(
 
         console.log(toSendMessage)
         send(
-            'service_lhnxl1w',
-            'template_5v4tld2',
+            '',
+            '',
             toSendMessage,
-            '8UblYlsTQ9eIlP-um'
+            ''
           )
             .then((response) => {
                   console.log(response.status)
@@ -49,7 +49,7 @@ export default forwardRef(
             setTimeout(()=>{
               setToSendMessage({
                 from_name:'',
-                to_name:'Shwetha K',
+                to_name:'',
                 message:'',
                 reply_to:''
               })
